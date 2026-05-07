@@ -1,0 +1,23 @@
+# Model settings (required)
+name: litedvdnet_downscaled_4_32
+model_name: LiteDVDNet
+module: 'litedvdnet'
+model_params:
+  num_input_frames: 5
+  channels: [32, 64, 128]
+  channels_2nd: [32, 64, 128]
+  ds_feat_ch: 32
+  inference_mode: DownscaleInBlockCached
+  downscale_factor: 4
+  interm_ch: 10
+  simple_cv: true
+  use_noise_map: true
+  use_depthwise: true
+# Training settings (required)
+epochs: 80
+orthog_epochs: 60
+batch_size: 64
+patch_size: 256
+max_number_patches: 32000
+loss_type: 'mse'
+

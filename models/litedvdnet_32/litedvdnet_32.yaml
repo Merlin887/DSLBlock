@@ -1,0 +1,21 @@
+# Model settings (required)
+name: lite_dvd_full
+model_name: LiteDVDNet
+module: 'litedvdnet'
+model_params:
+  num_input_frames: 5
+  channels: [32, 64, 128]
+  channels_2nd: [32, 64, 128]
+  inference_mode: Cached
+  interm_ch: 10
+  simple_cv: true
+  use_noise_map: true
+  use_depthwise: true
+# Training settings (required)
+epochs: 160
+orthog_epochs: 120
+batch_size: 64
+patch_size: 96
+max_number_patches: 64000
+loss_type: 'mse'
+
